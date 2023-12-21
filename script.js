@@ -14,8 +14,9 @@ function displayNumber(number) {
 function handleOperator(operator) {
     storedNumber = currentNumber;
     currentNumber = "";
-    this.operator = operator;
+    this.operator = operator; // Use 'this.operator' only within a class
 }
+
 
 // Function to handle clear button click
 function handleClear() {
