@@ -5,6 +5,17 @@ let storedNumber = "";
 let operator = "";
 let decimalAdded = false;
 
+
+let calculator = document.getElementById('calculator');
+
+operators.forEach(operator => {
+ operator.addEventListener('click', () => {
+ calculator.dataset.firstValue = display.value;
+ calculator.dataset.operator = operator.innerText;
+ display.value = '';
+ });
+});
+
 // Function to display a number on the screen
 function displayNumber(number) {
    if (number === "." && decimalAdded) return;
