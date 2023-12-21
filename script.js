@@ -11,10 +11,10 @@ function displayNumber(number) {
 }
 
 // Function to handle operator clicks
-function handleOperator(operator) {
+function handleOperator(op) {
     storedNumber = currentNumber;
     currentNumber = "";
-    this.operator = operator;
+    operator = op;
 }
 
 // Function to handle clear button click
