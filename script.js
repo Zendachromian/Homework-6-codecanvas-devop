@@ -23,10 +23,16 @@ clearButton.addEventListener("click", () => {
 
 const equalButton = document.querySelector(".equal-button");
 equalButton.addEventListener("click", () => {
-   screen.textContent = eval(screen.textContent);
+   try {
+       screen.textContent = eval(screen.textContent);
+   } catch (error) {
+       screen.textContent = "Error";
+   }
 });
 
 const decimalButton = document.querySelector(".decimal-button");
 decimalButton.addEventListener("click", () => {
-   screen.textContent += ".";
+   if (!screen.textContent.includes(".")) {
+       screen.textContent += ".";
+   }
 });
