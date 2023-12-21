@@ -14,7 +14,7 @@ function displayNumber(number) {
 function handleOperator(op) {
     storedNumber = currentNumber;
     currentNumber = "";
-    operator = op;
+    operator = op.trim(); // Remove any extra spaces
 }
 
 // Function to handle clear button click
@@ -58,9 +58,10 @@ numberButtons.forEach(button => {
 const operatorButtons = document.querySelectorAll(".operator-button");
 operatorButtons.forEach(button => {
     button.addEventListener("click", () => {
-        handleOperator(button.textContent);
+        handleOperator(button.textContent.trim()); // Remove any extra spaces
     });
 });
+
 
 const clearButton = document.querySelector(".clear-button");
 clearButton.addEventListener("click", handleClear);
